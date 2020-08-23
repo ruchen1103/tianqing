@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: PingFangSC-Regular, Verdana, Arial, 微软雅黑, 宋体;
+    list-style: none;
+}
+
+body {
+    font-size: 62.5%;
+}
+
+.wea1 {
+    width: 24em;
+    height: 26em;
+    background: no-repeat;
+    background-size: cover;
+    border-radius: 0.5em;
+
+}
+
+.wea-header {
+    height: 2em;
+    width: 95%;
+    padding-top: 1em;
+    padding-left: 1em;
+    color: #ffffff;
+}
+
+a {
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: #ff4757;
+}
+
+.wea-header-city {
+    font-size: 1.6em;
+    float: left;
+}
+
+.wea-header-time {
+    font-size: 1.2em;
+    float: left;
+    margin-left: 1em;
+
+}
+
+.wea-content {
+    width: 100%;
+    height: 8em;
+    margin-top: 1.5em;
+    border-bottom: 0.1em solid white;
+}
+
+.wea-content-left {
+
+    padding-left: 0;
+    float: left;
+}
+
+.wea-content-left img {
+    width: 5em;
+    height: 5em;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.wea-content-content {
+    margin-left: 0.5em;
+    float: left;
+    color: white;
+}
+
+.wea-content-content ul li {
+    width: 100%;
+    height: 25px;
+}
+
+.wea-content-content .tem {
+    font-size: 1.8em;
+}
+
+.wea-content-content .wea {
+    font-size: 1.4em;
+    margin-top: 1.6em;
+    width: 5em;
+    overflow: hidden;
+}
+
+.wea-content-right {
+
+    font-size: 1.2em;
+    color: white;
+    float: right;
+    margin-right: 1em;
+}
+
+.wea-content-right li {
+    height: 2em;
+}
+
+.wea-list {
+    width: 100%;
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+.wea-list ul {
+    width: 33%;
+    float: left;
+}
+
+.wea-list ul li {
+    text-align: center;
+    color: white;
+    width: 7em;
+    overflow: hidden;
+}
+
+.wea-list ul li.text {
+    height: 2em;
+}
+
+.wea-list img {
+    width: 4em;
+    height: 4em;
+}
