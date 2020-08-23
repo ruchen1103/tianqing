@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+  <title>天气查询</title>
+  <link rel="stylesheet" href="chaxun.css" />
+</head>
+
+<body>
+  <div class="wrap" id="app">
+    <div class="search_form">
+      <div class="form_group">
+        <a href="../main/main.html" title="返回"><img src="../image/chaxunicon.png" class="icon" /></a>
+        <input type="text" v-model="city" @keyup.enter="searchWeather" class="input_txt" placeholder="当前显示所在城市天气" />
+        <button class="input_sub" @click="searchWeather">搜索</button>
+      </div>
+      <div class="hotkey">
+        <a href="javascript:;" @click="changeCity('北京')">北京</a>
+        <a href="javascript:;" @click="changeCity('上海')">上海</a>
+        <a href="javascript:;" @click="changeCity('广州')">广州</a>
+        <a href="javascript:;" @click="changeCity('深圳')">深圳</a>
+      </div>
+    </div>
+    <ul class="weather_list">
+      <li class="wea_li" v-for="item in weatherList">
+        <ul class="img_ul">
+          <li class="img_li">
+            <span class="iconfont">{{ item.wea }}</span>
+          </li>
+          <li class="img_li">
+            <img class="wea_img" src="../image/icon/sunny.png" v-if="item.wea_day&&item.wea_day.indexOf('晴')!=-1" />
+            <img class="wea_img" src="../image/icon/rainyb.png"
+              v-if="item.wea_day&&item.wea_day.indexOf('雨')!=-1&&item.wea_day.indexOf('雷')==-1" />
+            <img class="wea_img" src="../image/icon/clear.png" v-if="item.wea_day&&item.wea_day.indexOf('云')!=-1" />
+            <img class="wea_img" src="../image/icon/xue.png" v-if="item.wea_day&&item.wea_day.indexOf('雪')!=-1" />
+            <img class="wea_img" src="../image/icon/cloudy.png" v-if="item.wea_day&&item.wea_day.indexOf('阴')!=-1" />
+            <img class="wea_img" src="../image/icon/blusteryr.png" v-if="item.wea_day&&item.wea_day.indexOf('雷')!=-1" />
+          </li>
+          <li class="img_li img_b">
+            <b class="li_b">{{ item.tem2 }}</b>
+            ~
+            <b class="li_b">{{ item.tem1 }}</b>
+          </li>
+          <li class="img_li img_day">
+            <div class="info_date"><span>{{item.day}}</span></div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="NODE_ENV=production browserify -g envify -e main.js | uglifyjs -c -m > build.js"></script>
+  <script src="./chaxun.js"></script>
+</body>
+
+</html>

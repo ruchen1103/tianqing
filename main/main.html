@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="../js/jquery.js"></script>
+</head>
+
+<body>
+    <div class="wea1 tianqi_bg">
+        <div class="wea-header">
+            <a href="../chaxun/chaxun.html" title="查询其他城市天气">
+                <div class="wea-header-city" v-html='{{weather.city}}'><img style="width: 10px"
+                        src="../image/address.png">&nbsp;</div>
+            </a>
+            <div class="wea-header-time"></div>
+        </div>
+        <div class="wea-content">
+            <div class="wea-content-left tianqi_icon"></div>
+            <div class="wea-content-content">
+                <ul>
+                    <li class="tem"></li>
+                    <li class="wea"></li>
+                </ul>
+            </div>
+            <div class="wea-content-right">
+                <ul>
+                    <li class="win"></li>
+                    <li class="air_level"></li>
+                    <li class="humidity"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="wea-list"></div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
